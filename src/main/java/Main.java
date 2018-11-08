@@ -1,4 +1,5 @@
 import Strategy.*;
+import Tree.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +8,8 @@ import java.util.List;
  *
     Implement the following algorithms for you binary search tree algorithm:
 
-        Breadth First Search
-        Depth First Search
+        Breadth First Traverse
+        Depth First Traverse
         Inorder
         Preorder
         Postorder
@@ -29,6 +30,14 @@ public class Main {
         strategies.add(new PostOrder());
         strategies.add(new MinimumDepth());
         strategies.add(new MaxDepth());
+
+        BinaryTree<Integer> binaryTree = new BinaryTree<Integer>();
+        binaryTree.add(1);
+        binaryTree.add(2);
+        binaryTree.add(3);
+        binaryTree.add(4);
+        binaryTree.add(5);
+
 
 
     }

@@ -8,7 +8,9 @@ import java.util.List;
 
 public class BreadthFirstSearch implements Strategy {
 
-    public List<Object> Traverse(BinaryTree<Object> binaryTree) {
+    private List<Object> aList = new ArrayList<Object>();
 
+    public List<Object> Traverse(BinaryTree<Object> binaryTree) {
+        return aList;
     }
 }

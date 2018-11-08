@@ -1,9 +1,12 @@
+Implementing Strategy Pattern with Binary Tree algorithms.
+
 Created Binary Tree in this order: 1,2,3,4,5
 
 BreadthFirstSearch
 1,2,3,4,5
 
-DepthFirstSearch // didn't finish
+DepthFirstSearch
+1,3,5,4,2
 
 InOrder
 5,3,4,1,2

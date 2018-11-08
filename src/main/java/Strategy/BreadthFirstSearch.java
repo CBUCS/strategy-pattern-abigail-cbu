@@ -30,12 +30,12 @@ public class BreadthFirstSearch implements Strategy {
             Node node = queue.remove();
             aList.add(node.item);
 
-            List<Node> neighbours = new ArrayList<Node>();
-            neighbours.add(node.right);
-            neighbours.add(node.left);
+            List<Node> childNodes = new ArrayList<Node>();
+            childNodes.add(node.right);
+            childNodes.add(node.left);
 
-            for (int i = 0; i < neighbours.size(); i++) {
-                Node n = neighbours.get(i);
+            for (int i = 0; i < childNodes.size(); i++) {
+                Node n = childNodes.get(i);
                 if (n != null && !visited.contains(n)) {
                     queue.add(n);
                     visited.add(n);

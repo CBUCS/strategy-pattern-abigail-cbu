@@ -21,37 +21,24 @@ public class DepthFirstSearch implements Strategy {
         List<Node> visited = new ArrayList<Node>();
 
         stack.add(binaryTree.root);
-        visited.add(binaryTree.root);
 
-        // todo: in progress...
-//        while(!stack.empty())
-//        {
-//            // Pop a vertex from stack and print it
-//            Object tempItem = stack.peek();
-//            stack.pop();
-//
-//            // Stack may contain same vertex twice. So
-//            // we need to print the popped item only
-//            // if it is not visited.
-//            if(!visited.get(tempItem))
-//            {
-//                aList.add(tempItem)l
-//                visited.set(s, true);
-//            }
-//
-//            // Get all adjacent vertices of the popped vertex s
-//            // If a adjacent has not been visited, then puah it
-//            // to the stack.
-//            Iterator<Integer> itr = adj[s].iterator();
-//
-//            while (itr.hasNext())
-//            {
-//                int v = itr.next();
-//                if(!visited.get(v))
-//                    stack.push(v);
-//            }
-//
-//        }
+        while (!stack.isEmpty()) {
+            Node node = stack.pop();
+            aList.add(node.item);
+
+            List<Node> childNodes = new ArrayList<Node>();
+            childNodes.add(node.right);
+            childNodes.add(node.left);
+
+            for (int i = 0; i < childNodes.size(); i++) {
+                Node n = childNodes.get(i);
+                if (n != null && !visited.contains(n)) {
+                    stack.add(n);
+                    visited.add(n);
+                }
+            }
+
+        }
     }
 
     public String StrategyName() {

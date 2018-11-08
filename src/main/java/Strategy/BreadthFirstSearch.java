@@ -1,4 +1,4 @@
 package Strategy;
 
-public class BreadthFirstSearch {
+public class BreadthFirstSearch implements Strategy {
 }

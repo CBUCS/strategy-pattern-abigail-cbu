@@ -1,4 +1,4 @@
 package Strategy;
 
-public class PostOrder {
+public class PostOrder implements Strategy {
 }

@@ -1,4 +1,4 @@
 package Strategy;
 
-public class MaxDepth {
+public class MaxDepth implements Strategy {
 }

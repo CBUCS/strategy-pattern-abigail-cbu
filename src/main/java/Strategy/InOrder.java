@@ -1,4 +1,4 @@
 package Strategy;
 
-public class InOrder {
+public class InOrder implements Strategy {
 }

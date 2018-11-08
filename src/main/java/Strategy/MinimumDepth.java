@@ -1,4 +1,4 @@
 package Strategy;
 
-public class MinimumDepth {
+public class MinimumDepth implements Strategy {
 }

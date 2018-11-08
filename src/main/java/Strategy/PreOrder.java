@@ -4,21 +4,33 @@ import Tree.BinaryTree;
 import Tree.Node;
 
 import java.util.ArrayList;
+import java.util.List;
 
+
+/**
+ * 1. Visit the node.
+ * 2. Call itself to traverse the node's left subtree.
+ * 3. Call itself to traverse the node's right subtree.
+ */
 public class PreOrder implements Strategy {
 
-    /**
-     * 1. Visit the node.
-     * 2. Call itself to traverse the node's left subtree.
-     * 3. Call itself to traverse the node's right subtree.
-     *
-     * @param binaryTree
-     */
-    public ArrayList<Object> Traverse(BinaryTree<Object> binaryTree) {
-        if (node != null) {
-            //access the root element of t;
-            Traverse(node.left);
-            Traverse(node.right);
+    private List<Object> aList = new ArrayList<Object>();
+
+    public List<Object> Traverse(BinaryTree<Object> binaryTree) {
+
+        if (binaryTree != null && binaryTree.root != null) {
+
+            preOrder(binaryTree.root);
+            return aList;
         }
+
+        return null;
     }
+
+    public void preOrder(Node node) {
+        aList.add(node.item);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class BinaryTree<T> {
 
-    private Node<T> root;
+    public Node<T> root;
 
     public BinaryTree() {
         root = null;

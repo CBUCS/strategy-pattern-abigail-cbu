@@ -31,13 +31,17 @@ public class Main {
         strategies.add(new MinimumDepth());
         strategies.add(new MaxDepth());
 
-        BinaryTree<Integer> binaryTree = new BinaryTree<Integer>();
+        BinaryTree<Object> binaryTree = new BinaryTree<Object>();
         binaryTree.add(1);
         binaryTree.add(2);
         binaryTree.add(3);
         binaryTree.add(4);
         binaryTree.add(5);
 
+
+        for(Strategy strategy : strategies) {
+            System.out.println(strategy.Traverse(binaryTree));
+        }
 
 
     }

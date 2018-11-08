@@ -4,8 +4,9 @@ import Tree.BinaryTree;
 import Tree.Node;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface Strategy {
 
-    ArrayList<Object> Traverse(BinaryTree<Object> binaryTree);
+    List<Object> Traverse(BinaryTree<Object> binaryTree);
 }

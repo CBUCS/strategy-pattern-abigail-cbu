@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public class BinaryTree<T> {
 
     public Node<T> root;
+    private int size = 0;
 
     public BinaryTree() {
         root = null;
@@ -16,6 +17,8 @@ public class BinaryTree<T> {
         } else {
             insert(this.root, item);
         }
+
+        this.size++;
     }
 
     public Node<T> insert(Node<T> bNode, T item) {
@@ -61,6 +64,11 @@ public class BinaryTree<T> {
 
             }
         }
+    }
+
+    public int size()
+    {
+        return this.size;
     }
 
 }

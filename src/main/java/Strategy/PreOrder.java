@@ -28,9 +28,16 @@ public class PreOrder implements Strategy {
     }
 
     public void preOrder(Node node) {
+        if (node == null)
+            return;
+
         aList.add(node.item);
         preOrder(node.left);
         preOrder(node.right);
+    }
+
+    public String StrategyName(){
+        return "PreOrder";
     }
 
 }

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class InOrder implements Strategy {
 
-    private List<Object> aList = new ArrayList<Object>();
+    private final List<Object> aList = new ArrayList<Object>();
 
     public List<Object> Traverse(BinaryTree<Object> binaryTree) {
 
@@ -28,8 +28,15 @@ public class InOrder implements Strategy {
     }
 
     public void inOrder(Node node) {
+        if (node == null)
+            return;
+
         inOrder(node.left);
         aList.add(node.item);
         inOrder(node.right);
+    }
+
+    public String StrategyName(){
+        return "InOrder";
     }
 }

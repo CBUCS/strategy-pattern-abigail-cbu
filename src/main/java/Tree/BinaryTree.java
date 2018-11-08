@@ -11,14 +11,17 @@ public class BinaryTree<T> {
     }
 
     public void add(T item) {
-        insert(this.root, item);
+        if (this.root == null) {
+            this.root = new Node<T>(item);
+        } else {
+            insert(this.root, item);
+        }
     }
 
     public Node<T> insert(Node<T> bNode, T item) {
         if (bNode == null) {
             bNode = new Node<T>(item);
         } else {
-
             if (bNode.getRight() == null) {
                 bNode.right = insert(bNode.right, item);
             } else {

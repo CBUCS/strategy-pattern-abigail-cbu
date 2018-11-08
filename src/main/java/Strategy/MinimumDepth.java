@@ -40,4 +40,8 @@ public class MinimumDepth implements Strategy {
 
         return Math.min(minDepth(node.left), minDepth(node.right)) + 1;
     }
+
+    public String StrategyName(){
+        return "MinimumDepth";
+    }
 }

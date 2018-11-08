@@ -43,4 +43,8 @@ public class MaxDepth implements Strategy {
         }
     }
 
+    public String StrategyName(){
+        return "MaxDepth";
+    }
+
 }

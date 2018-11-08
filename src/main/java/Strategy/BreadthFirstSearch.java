@@ -13,4 +13,8 @@ public class BreadthFirstSearch implements Strategy {
     public List<Object> Traverse(BinaryTree<Object> binaryTree) {
         return aList;
     }
+
+    public String StrategyName() {
+        return "BreadthFirstSearch";
+    }
 }

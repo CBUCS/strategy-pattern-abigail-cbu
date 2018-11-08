@@ -27,8 +27,15 @@ public class PostOrder implements Strategy {
     }
 
     public void postOrder(Node node) {
+        if (node == null)
+            return;
+
         postOrder(node.left);
         postOrder(node.right);
         aList.add(node.item);
+    }
+
+    public String StrategyName(){
+        return "PostOrder";
     }
 }

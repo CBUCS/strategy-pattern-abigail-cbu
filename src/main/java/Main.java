@@ -5,21 +5,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
-    Implement the following algorithms for you binary search tree algorithm:
-
-        Breadth First Traverse
-        Depth First Traverse
-        Inorder
-        Preorder
-        Postorder
-        Minimum Depth
-        Max Depth
-*/
+ * Implement the following algorithms for you binary search tree algorithm:
+ * <p>
+ * Breadth First Traverse
+ * Depth First Traverse
+ * Inorder
+ * Preorder
+ * Postorder
+ * Minimum Depth
+ * Max Depth
+ */
 
 public class Main {
 
-    public static void main (String args[]) {
+    public static void main(String args[]) {
 
         List<Strategy> strategies = new ArrayList<Strategy>();
         // Add strategies here.
@@ -39,8 +38,16 @@ public class Main {
         binaryTree.add(5);
 
 
-        for(Strategy strategy : strategies) {
-            System.out.println(strategy.Traverse(binaryTree));
+        for (Strategy strategy : strategies) {
+            List<Object> result = strategy.Traverse(binaryTree);
+            if (result != null) {
+                System.out.println(strategy.StrategyName());
+
+                for (Object item : result) {
+                    System.out.println(item);
+                }
+            }
+
         }
 
 
